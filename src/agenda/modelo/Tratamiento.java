@@ -31,28 +31,28 @@ public enum Tratamiento {
         this.removedorCuticula= removedor; 
     }
     
-    private int duracion(){ 
+    public int duracion(){ 
         return duracion; 
     }
     
-    private int shampoo(){
+    public int shampoo(){
         return shampoo;
     }
     
     
-    private int acondicionador(){
+    public int acondicionador(){
         return acondicionador;
     }
     
-    private int locion(){
+    public int locion(){
         return locion;
     }
     
-    private int tinte(){
+    public int tinte(){
         return tinte;
     }
    
-    private int removedor(){ 
+    public int removedor(){ 
         return removedorCuticula;
     }
     

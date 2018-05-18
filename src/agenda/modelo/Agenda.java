@@ -5,10 +5,14 @@
  */
 package agenda.modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author andre
  */
 public class Agenda {
+    private ArrayList<Cita> citas;
+    
     
 }

@@ -11,4 +11,34 @@ package agenda.modelo;
  */
 public class Cliente {
     
+    private String nombre;
+    private String celular; 
+
+    public Cliente(){
+        this.nombre="";
+        this.celular=""; 
+    }
+    
+    public Cliente(String nombre, String numero){
+        this.nombre=nombre;
+        this.celular=numero;
+    }
+   
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNumero() {
+        return celular;
+    }
+
+    public void setNumero(String celular) {
+        this.celular = celular;
+    }
+
+    
 }
