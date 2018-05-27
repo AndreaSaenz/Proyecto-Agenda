@@ -6,6 +6,7 @@
 package agenda.modelo;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -13,16 +14,21 @@ import java.util.GregorianCalendar;
  * @author andre
  */
 public class Cita {
+    public final int HORA_APERTURA=9;
+    public final int HORA_CIERRE=21;
+
     private ArrayList<Servicio> servicios;
     private Cliente cliente;
     private int duracionTotal; //En min
     private Notificacion noti;
     private GregorianCalendar hora;
     
-    public Cita(){
+    public Cita(ArrayList<Servicio> servicios, Cliente cliente, int duracionTotalMin){
         this.servicios= new ArrayList<Servicio>();
         this.cliente= new Cliente();
-        
+        this.noti=new Notificacion(); 
+        this.hora= new GregorianCalendar()
+        hora.set(Calendar.HOUR, )
         
     }
 

@@ -5,18 +5,49 @@
  */
 package agenda.modelo;
 
+import java.lang.String;
+import java.lang.Integer;
+import java.sql.ResultSet;
 /**
  *
  * @author andre
  */
 public class ProductoAlmacen {
+    private String producto;
     private boolean estadoDisponibilidad;
     private int cantidadDisponible;
     
-    public ProductoAlmacen(boolean estado, int cantidad){
-        this.estadoDisponibilidad= estado;
-        this.cantidadDisponible = cantidad;
+    public ProductoAlmacen(String name){
+        this.producto= name;
+        this.estadoDisponibilidad=false;
+        this.cantidadDisponible=-1;
     }
     
     
+    public void setEstadoYCantDisponible(String info, int mlNecesarios){
+        String[] segmentacion = info.split(",");
+        this.cantidadDisponible = Integer.parseInt(segmentacion[2]);
+        if(this.cantidadDisponible>0 && this.cantidadDisponible>=mlNecesarios){
+            this.estadoDisponibilidad=true;
+        }
+        else{
+            this.estadoDisponibilidad=false;
+        }
+         
+    }
+    
+    public boolean isEstadoDisponibilidad() {
+        return estadoDisponibilidad;
+    }
+
+    public int getCantidadDisponible() {
+        return cantidadDisponible;
+    }
+    
+      
+    public int cambiarCantidadDisponibleBD(int cantidadUsada){
+        int nuevaCantidad = this.cantidadDisponible - cantidadUsada;
+        return nuevaCantidad;
+    }
+   
 }

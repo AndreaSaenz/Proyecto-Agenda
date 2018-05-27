@@ -26,22 +26,33 @@ public class Servicio {
     }
     
     public void agregarProductos(Tratamiento tratamiento){
+        String info="";
         switch(tratamiento){
             case CORTES:
-                ProductoAlmacen producto= new ProductoAlmacen("Acondicionador", CORTES.acondicionador());
-                productos.add(producto);
+                ProductoAlmacen producto0= new ProductoAlmacen("Locion");
+                info="";  //busqueda de info de BD
+                producto0.setEstadoYCantDisponible(info, CORTES.locion());
+                productos.add(producto0);
                 break;
             case TINTES:
-                ProductoAlmacen producto1= new ProductoAlmacen("Shampoo", TINTES.shampoo());
+                ProductoAlmacen producto1= new ProductoAlmacen("Shampoo");
+                info="";  //busqueda de info de BD
+                producto1.setEstadoYCantDisponible(info, TINTES.shampoo());
                 productos.add(producto1);
-                producto1= new ProductoAlmacen("Acondicionador", TINTES.acondicionador());
-                productos.add(producto1);
-                producto1= new ProductoAlmacen("Tinte", TINTES.tinte());
-                productos.add(producto1);
+                ProductoAlmacen producto2= new ProductoAlmacen("Acondicionador");
+                info="";  //busqueda de info de BD
+                producto2.setEstadoYCantDisponible(info, TINTES.acondicionador());
+                productos.add(producto2);
+                ProductoAlmacen producto3= new ProductoAlmacen("Tinte");
+                info="";  //busqueda de info de BD
+                producto3.setEstadoYCantDisponible(info, TINTES.tinte());
+                productos.add(producto3);
                 break;
             case MANICURE:
-                ProductoAlmacen producto2= new ProductoAlmacen("Removedor", MANICURE.removedor());
-                productos.add(producto2);
+                ProductoAlmacen producto4= new ProductoAlmacen("Removedor-Cuticula");
+                info="";  //busqueda de info de BD
+                producto4.setEstadoYCantDisponible(info, MANICURE.removedor());
+                productos.add(producto4);
                 break;
         } 
     }

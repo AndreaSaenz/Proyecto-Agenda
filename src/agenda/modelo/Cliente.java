@@ -12,16 +12,16 @@ package agenda.modelo;
 public class Cliente {
     
     private String nombre;
-    private String celular; 
+    private String correo; 
 
     public Cliente(){
         this.nombre="";
-        this.celular=""; 
+        this.correo=""; 
     }
     
-    public Cliente(String nombre, String numero){
+    public Cliente(String nombre, String correo){
         this.nombre=nombre;
-        this.celular=numero;
+        this.correo=correo;
     }
    
     public String getNombre() {
@@ -32,12 +32,12 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getNumero() {
-        return celular;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setNumero(String celular) {
-        this.celular = celular;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     

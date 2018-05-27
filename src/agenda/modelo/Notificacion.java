@@ -20,7 +20,7 @@ public class Notificacion {
     }
     
     
-    public Notificacion( int horas, int min){
+    public Notificacion(int horas, int min){
         this.estadoActivacion=true;
         this.tiempoNotificacion= (60*horas)+min;
     }

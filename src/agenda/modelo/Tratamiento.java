@@ -10,8 +10,8 @@ package agenda.modelo;
  * @author andre
  */
 public enum Tratamiento {
-    CORTES(30,0,0, 5,0,0),
-    TINTES(45,10,10,0,20,0),
+    CORTES(60,0,0, 5,0,0),
+    TINTES(60,10,10,0,20,0),
     MANICURE(60,0,0,0,0,5);
 
     
